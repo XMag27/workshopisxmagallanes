@@ -1,4 +1,5 @@
-#create a function that shows a restaurant menu
+
+
 mealsdictionary = {}
 mealsdictionary["Hamburger"] = 5.00
 mealsdictionary["Hot Dog"] = 3.00
@@ -71,17 +72,15 @@ def askConfirmation(total):
         #order again
         return False
 
-showMenu()
-order = getOrder()
-total = getCost(order)
-total = applyDiscount(total)
-isOrdering = askConfirmation(total)
-if isOrdering:
-    print("Your order has been placed. Thank you!")
-    print("Your total is: " + str(total) + " You can pay at the counter")
-else:
-    print("Your order has been cancelled. Thank you!")
 
-#define test cases
-
-
+def main():
+    showMenu()
+    order = getOrder()
+    total = getCost(order)
+    total = applyDiscount(total)
+    confirmation = askConfirmation(total)
+    if confirmation:
+        print("Your order has been placed")
+    else:
+        print("Your order has been cancelled")
+    print("Your total is: ", total)
