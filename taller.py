@@ -58,7 +58,7 @@ def getCost(order):
     return total
 
 def applyDiscount(total):
-    if total > 50:
+    if total > 50 and total < 100:
         total = total - 10
     if total > 100:
         total = total - 25
